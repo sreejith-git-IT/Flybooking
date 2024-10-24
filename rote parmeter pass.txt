@@ -1,0 +1,15 @@
+
+set
+ this.router.navigate(['/shopall/productdetails'], { queryParams: { orderby: item.id} })
+
+get
+ng onit
+ this.route.queryParams
+      .subscribe(params => {
+        console.log("kk",params['orderby']); // { orderby: "price" }
+        this.orderby= params['orderby'];
+        // price
+      }
+    ); 
+    console.log('ss',this.orderby); 
+ 
